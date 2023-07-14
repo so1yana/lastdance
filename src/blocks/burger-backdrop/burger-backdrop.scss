@@ -1,0 +1,31 @@
+@import '../../less/variables';
+
+.burger-backdrop {
+
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: $--bgColor-backdrop;
+
+  &--hidden {
+    display: none;
+  }
+
+  &--no-bgc {
+    background: none;
+  }
+
+  @media (min-width: $screen-xl) {
+
+    & {
+      z-index: 0;
+      background: none;
+    }
+
+  }
+
+}

@@ -1,0 +1,134 @@
+@import '../../less/variables';
+
+.modal {
+  visibility: visible;
+  overflow-y: auto;
+  position: fixed;
+  min-width: 320px;
+  width: 320px;
+  height: 100%;
+  background-color: $--bgColor-default;
+  box-shadow: 10px 0 20px 0 gray;
+  border-left: 1px solid $--color-light-green;
+  transform: translateX(0);
+  right: 0;
+  transition: transform 0.5s ease-in;
+  z-index: 5;
+
+
+  &--active {
+    overflow: hidden;
+  }
+
+  &--hidden {
+    visibility: hidden;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in, visibility 0.1s 0.5s;
+  }
+
+  &__container {
+    width: 288px;
+    margin: 104px auto 0;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 4px;
+      height: 40px;
+      border-radius: 0 6px 6px 0;
+      background-color: $--bgColor-aqua;
+    }
+  }
+
+  &__title-text {
+    color: $--color-light-black;
+    font-family: $--font-lakes-bold;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+  }
+
+  &__input {
+    position: relative;
+    margin-bottom: 16px;
+    height: 48px;
+    width: 90%;
+    border-radius: 8px;
+    border: 1px solid $--borderColor-slideContainer;
+    background: $--bgColor-default;
+    font-size: 18px;
+    padding: 0 16px;
+
+    &::placeholder {
+      color: $--bgColor-paginationBullet-active;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      text-align: start;
+    }
+  }
+
+  &__agree {
+    margin-bottom: 16px;
+  }
+
+  &__agree-text {
+    color: $--color-light-gray;
+    font-family: $--font-lakes-medium;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__link {
+    color: $--color-pink;
+    text-decoration: none;
+  }
+
+  &__send-button-container {
+    margin-left: auto;
+    width: 136px;
+    height: 32px;
+  }
+
+  &__send-button {
+    background-color: $--color-pink;
+    border-radius: 16px;
+    color: $--color-default;
+    height: 100%;
+    width: 100%;
+    transition: all 0.1s linear;
+    font-family: $--font-lakes-medium;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+
+    &__send-button:hover {
+      transform: scale(1.05);
+      background-color: $--bgColor-slideButton;
+      border-color: $--borderColorButton;
+    }
+  }
+
+  &__send-button-arrow {
+    margin-left: 16px;
+  }
+
+  @media (min-width: $screen-sm) {
+    & {
+      width: 440px;
+    }
+
+    &__container {
+      width: 376px;
+      margin: 40px 32px;
+    }
+  }
+}

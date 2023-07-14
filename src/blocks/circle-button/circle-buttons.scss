@@ -1,0 +1,29 @@
+@import '../../less/variables';
+
+.circle-button-search {
+  margin-left: auto;
+}
+
+@media (min-width: $screen-sm) {
+
+  .circle-button-call,
+  .circle-button-chat,
+  .circle-button-profile {
+    display: block;
+  }
+
+  .circle-button-call {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $screen-xl) {
+  .circle-button-close {
+    display: none;
+  }
+
+  .circle-button-repair {
+    display: block;
+    z-index: 99;
+  }
+}

@@ -1,0 +1,139 @@
+@import '../../less/variables';
+
+.equipment {
+
+  &__title {
+    background: $--bgLinear-title;
+  }
+
+  &__swiper {
+    position: relative;
+    overflow: hidden;
+    max-height: 550px;
+    transition: max-height 0.4s ease-in;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 180px;
+      right: 0;
+      background: $--bgLinear-swiper-before;
+      z-index: 2;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  &__slide {
+    text-align: center;
+    max-width: 240px;
+    margin: 16px 0 16px 16px;
+  }
+
+  &__slide-container {
+    position: relative;
+    display: flex;
+    width: 240px;
+    height: 160px;
+    border: solid 1px $--borderColor-slideContainer;
+    border-radius: 6px;
+    align-items: center;
+    background-color: $--bgColor-default;
+    transition: background-color .1s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  &__slide-image {
+    margin: auto auto auto 16px;
+    max-height: 40px;
+    max-width: 128px;
+  }
+
+  &__slide-button {
+    position: absolute;
+    margin: 16px 16px 16px auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid 3px $--color-pink;
+    background-color: $--bgColor-default;
+    transition: all 0.2s;
+    bottom: 0;
+    right: 0;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 6px;
+      border: solid 3px $--color-pink;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 0 1px 0 0;
+      transform: translate(-0.4em, -0.3em) rotate(45deg);
+      transition: border-color .2s;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: rgba(0, 0, 0, 0.05);
+      border-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &:hover::before {
+      border-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__slide-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #1B1C21;
+    font-family: $--font-lakes-medium;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin: 16px;
+  }
+
+  &__expand-button {
+    display: none;
+  }
+
+  @media (min-width: $screen-sm) {
+    &__slide {
+      margin-bottom: 0;
+    }
+
+    &__wrapper {
+      flex-wrap: wrap;
+      transform: translate3d(0px, 0px, 0px) !important;
+    }
+
+    &__swiper--cutted {
+      max-height: 180px;
+    }
+
+    &__swiper::before {
+      display: none;
+    }
+
+    &__slide-container {
+      width: 224px;
+    }
+
+    &__expand-button {
+      display: flex;
+      margin: 24px 0 32px 16px;
+    }
+  }
+}

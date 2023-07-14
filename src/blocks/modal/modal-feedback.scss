@@ -1,0 +1,12 @@
+.modal-feedback {
+
+  &__input-list {
+    position: relative;
+  }
+
+  &__input-message {
+    padding-top: 16px;
+    height: 118px;
+    resize: none;
+  }
+}

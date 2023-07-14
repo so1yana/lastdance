@@ -1,0 +1,30 @@
+@import '../../less/variables';
+
+div .swiper-pagination {
+  position: initial;
+  display: block;
+  height: 20px;
+  margin: 0 auto 16px auto;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  cursor: pointer;
+  display: inline-block;
+  background-color: $--bgColor-paginationBullet !important;
+  width: 12px !important;
+  height: 12px !important;
+  vertical-align: middle;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $--bgColor-paginationBullet-active !important;
+}
+
+@media (min-width: $screen-sm) {
+
+  .swiper-pagination {
+    display: none !important;
+  }
+
+}

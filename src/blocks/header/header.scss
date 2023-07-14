@@ -1,0 +1,41 @@
+@import '../../less/variables';
+
+.header {
+  height: 88px;
+  background-color: $--bgColor-default;
+  align-items: center;
+
+  &__layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 16px;
+  }
+
+  &__divider {
+    width: 2px;
+    height: 32px;
+    margin: 0 16px 0 auto;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+
+  @media (min-width: $screen-sm) {
+    &__divider {
+      margin: 0 16px 0 0;
+
+      &--hidden {
+        display: block;
+      }
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    & {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import '../../less/variables';
+
+.footer {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+
+  &__text {
+    text-decoration: none;
+    color: $--color-light-gray;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__policy {
+    margin: 0 35px;
+  }
+
+  @media (min-width: $screen-sm) {
+
+    & {
+      text-align: left;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin: 0 24px;
+      height: 105px;
+    }
+
+    &__public-offer {
+      flex-shrink: 1;
+      text-align: right;
+    }
+
+    &__policy,
+    &__developed {
+      flex-shrink: 0;
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    & {
+      margin-left: 320px;
+    }
+
+    &__developed {
+      margin-left: 32px;
+    }
+  }
+}

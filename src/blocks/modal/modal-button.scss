@@ -1,0 +1,19 @@
+@import '../../less/variables';
+
+.modal-close-button-container {
+  position: fixed;
+  right: 264px;
+  top: 24px;
+  width: 40px;
+  height: 40px;
+  z-index: 99;
+}
+
+
+@media (min-width: $screen-sm) {
+  .modal-close-button-container {
+    right: 472px;
+    left: auto;
+    top: 32px;
+  }
+}

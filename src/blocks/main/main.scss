@@ -1,0 +1,12 @@
+@import '../../less/variables';
+
+.main {
+  margin-top: 24px;
+  position: relative;
+
+  @media (min-width: $screen-xl) {
+    & {
+      margin-left: 320px;
+    }
+  }
+}

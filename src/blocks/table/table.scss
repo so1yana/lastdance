@@ -1,0 +1,39 @@
+@import '../../less/variables';
+
+.table {
+
+  &__row-header {
+    background: inherit;
+    text-align: left;
+  }
+
+  &__item {
+    border-bottom: 1px solid $--borderColor-slideContainer;
+    color: $--color-light-black;
+    padding: 23px 0 23px 16px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  &__header {
+    color: $--color-light-gray;
+    font-size: 14px;
+    line-height: 16px;
+
+    & ~ & {
+      padding-left: 16px;
+    }
+  }
+
+  &__row:last-child > &__item {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+
+}

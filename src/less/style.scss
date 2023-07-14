@@ -1,0 +1,42 @@
+@import '../blocks/brands/brands';
+@import '../blocks/burger/burger';
+@import '../blocks/burger-backdrop/burger-backdrop';
+@import '../blocks/circle-button/circle-button';
+@import '../blocks/circle-button/circle-buttons';
+@import '../blocks/equipment/equipment';
+@import '../blocks/expand-button/expand-button';
+@import '../blocks/footer/footer';
+@import '../blocks/header/header';
+@import '../blocks/logo/logo';
+@import '../blocks/main/main';
+@import '../blocks/modal/modal';
+@import '../blocks/modal/modal-button';
+@import '../blocks/modal/modal-bg';
+@import '../blocks/modal/modal-feedback';
+@import '../blocks/page/page';
+@import '../blocks/prices/prices';
+@import '../blocks/service/service';
+@import '../blocks/swiper-pagination/swiper-pagination';
+@import '../blocks/table/table';
+@import './variables';
+
+@font-face {
+  font-family: 'TTLakes-Bold';
+  src: url('../fonts/TTLakes-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TTLakes-Medium';
+  src: url('../fonts/TTLakes-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TTLakes-Regular';
+  src: url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
